@@ -6,6 +6,7 @@ public class SignalsInstaller : MonoInstaller
     {
         Container.DeclareSignal<GameStarted>();
         Container.DeclareSignal<PlayAudio>();
+        Container.DeclareSignal<SwipeDetectionSignal>();
+        Container.DeclareSignal<GameStateChanged>();
     }
-
 }

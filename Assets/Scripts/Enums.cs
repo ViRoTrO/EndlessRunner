@@ -1,4 +1,13 @@
 
+public enum GameStateEnum
+{
+    MainMenu,
+    GameStart,
+    Pause,
+    Playing,
+    GameOver
+}
+
 public enum PlayerStates
 {
     Idle,
@@ -9,6 +18,14 @@ public enum PlayerStates
     MoveLeft,
     MoveRight,
     Slide
+}
+
+public enum SwipeDirectionEnums
+{
+    Up,
+    Down,
+    Right,
+    Left
 }
 
 public enum SoundNamesEnums
