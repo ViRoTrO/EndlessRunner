@@ -1,0 +1,19 @@
+<libraries>
+  <library
+      name="D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
+      jars="D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\.transforms\f3c9c924ca581bd68cc02ba86b799615\transformed\out\jars\classes.jar;D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\.transforms\f3c9c924ca581bd68cc02ba86b799615\transformed\out\jars\libs\unity-classes.jar"
+      resolved="Gradle:unityLibrary:unspecified"
+      folder="D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\.transforms\f3c9c924ca581bd68cc02ba86b799615\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="__local_aars__:D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar"
+      jars="D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar"
+      resolved="__local_aars__:D:\UnityDev\Workspace\EndlessRunner\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified"/>
+</libraries>
