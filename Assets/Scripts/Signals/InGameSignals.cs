@@ -1,10 +1,5 @@
 using UnityEngine;
 
-public class GameStarted
-{
-    public string Message = "Game started !!";
-}
-
 public class SwipeDetectionSignal
 {
     public SwipeDirectionEnums Direction;

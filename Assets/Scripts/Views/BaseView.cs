@@ -5,6 +5,8 @@ using Zenject;
 
 public class BaseView : MonoBehaviour
 {
+    [SerializeField] protected GameSO GameInfoSO;
+
     protected GameModel Model;
     protected SignalBus SignalService;
 

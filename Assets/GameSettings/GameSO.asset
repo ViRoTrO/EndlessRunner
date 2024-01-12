@@ -12,16 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e21ec115421224d92c9d9f7a6c72d6, type: 3}
   m_Name: GameSO
   m_EditorClassIdentifier: 
-  AudioClips:
-  - Id: 1
-    AudioClipPath: {fileID: 0}
+  _environMentPrefab: {fileID: 4953803153643688445, guid: 1d14e4f9db50f03448c39a48dac980c8, type: 3}
+  _obstacles:
   - Id: 2
-    AudioClipPath: {fileID: 0}
-  - Id: 3
-    AudioClipPath: {fileID: 0}
-  - Id: 4
-    AudioClipPath: {fileID: 0}
-  - Id: 5
-    AudioClipPath: {fileID: 0}
+    PrefabReference: {fileID: 3004554902456815041, guid: 2e0b73eafa570f649bb2ff0c9e73e8ee, type: 3}
+  - Id: 1
+    PrefabReference: {fileID: 3700095422624156333, guid: 13cb22b5a2ca17d498f4e1cba291059f, type: 3}
+  - Id: 0
+    PrefabReference: {fileID: 8109136686500154315, guid: 6a7ce8f1de027a049a4f495f61b58c1d, type: 3}
+  - Id: 8
+    PrefabReference: {fileID: 3008523134939814123, guid: 6c19b81258f62fe4a919a71125eee31e, type: 3}
   - Id: 6
-    AudioClipPath: {fileID: 0}
+    PrefabReference: {fileID: 7021601653279507818, guid: 25fcc73b6fe722b488457cec3ee42ed1, type: 3}
+  - Id: 7
+    PrefabReference: {fileID: 3040627260013594196, guid: efe54fdc8ce626d4a8d714a3a98bf392, type: 3}
+  _coins:
+  - Id: 0
+    PrefabReference: {fileID: 6050976489579757356, guid: 5df8592d37f029d4da36bb7f873ca07b, type: 3}
+  _audioClips: []

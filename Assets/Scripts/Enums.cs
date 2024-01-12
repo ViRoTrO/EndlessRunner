@@ -2,10 +2,11 @@
 public enum GameStateEnum
 {
     MainMenu,
-    GameStart,
-    Pause,
+    GamePlayStart,
+    GamePause,
     Playing,
-    GameOver
+    GameOver,
+    GameUnPause
 }
 
 public enum PlayerStates
@@ -26,6 +27,24 @@ public enum SwipeDirectionEnums
     Down,
     Right,
     Left
+}
+
+public enum ObstacleTypesEnums
+{
+    OpenRight,
+    OpenLeft,
+    OpenCenter,
+    JumpLeft,
+    JumpRight,
+    JumpCenter,
+    SlideLeft,
+    SlideRight,
+    SlideCenter
+}
+
+public enum CoinTypesEnums
+{
+    Noraml
 }
 
 public enum SoundNamesEnums

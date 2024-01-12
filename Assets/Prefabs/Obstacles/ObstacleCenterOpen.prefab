@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345163698457676770}
+  - component: {fileID: 5153304526118323676}
+  - component: {fileID: 1339385825859539810}
   m_Layer: 0
   m_Name: ObstacleCenterOpen
   m_TagString: Untagged
@@ -33,6 +35,32 @@ Transform:
   - {fileID: 4281929412839798486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5153304526118323676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3004554902456815041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10690c2367e14354cab1c948aa8a6597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameInfoSO: {fileID: 0}
+  id: 2
+--- !u!114 &1339385825859539810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3004554902456815041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fb7e9ef027a894d86509c5b52d3888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1391053505442667459
 PrefabInstance:
   m_ObjectHideFlags: 0

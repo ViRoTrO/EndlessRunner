@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6376880672589448615}
+  - component: {fileID: 1848098603442331182}
+  - component: {fileID: 8577746522291260515}
   m_Layer: 0
   m_Name: RepeatTrack_1
   m_TagString: Untagged
@@ -34,6 +36,39 @@ Transform:
   - {fileID: 1584103844220401663}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1848098603442331182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4953803153643688445}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0, z: 167.29698}
+  m_Center: {x: 0, y: -0.5, z: 55.687172}
+--- !u!114 &8577746522291260515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4953803153643688445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fb7e9ef027a894d86509c5b52d3888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5210977422463171917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,7 +87,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6749420670425828018, guid: 41734c20aa92d94458ba8a0f755d9920, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10.58
       objectReference: {fileID: 0}
     - target: {fileID: 6749420670425828018, guid: 41734c20aa92d94458ba8a0f755d9920, type: 3}
       propertyPath: m_LocalPosition.y
@@ -118,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6749420670425828018, guid: 41734c20aa92d94458ba8a0f755d9920, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10.58
       objectReference: {fileID: 0}
     - target: {fileID: 6749420670425828018, guid: 41734c20aa92d94458ba8a0f755d9920, type: 3}
       propertyPath: m_LocalPosition.y
@@ -192,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6749420670425828018, guid: 41734c20aa92d94458ba8a0f755d9920, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10.58
       objectReference: {fileID: 0}
     - target: {fileID: 6749420670425828018, guid: 41734c20aa92d94458ba8a0f755d9920, type: 3}
       propertyPath: m_LocalPosition.y

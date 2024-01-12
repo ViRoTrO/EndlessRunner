@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7754476021386724460}
+  - component: {fileID: 5778085354009282772}
+  - component: {fileID: 903734376274370310}
   m_Layer: 0
   m_Name: ObstacleSlideRight
   m_TagString: Untagged
@@ -33,6 +35,32 @@ Transform:
   - {fileID: 2497438720145339989}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5778085354009282772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040627260013594196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10690c2367e14354cab1c948aa8a6597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameInfoSO: {fileID: 0}
+  id: 7
+--- !u!114 &903734376274370310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040627260013594196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fb7e9ef027a894d86509c5b52d3888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8598667932395801021
 GameObject:
   m_ObjectHideFlags: 0

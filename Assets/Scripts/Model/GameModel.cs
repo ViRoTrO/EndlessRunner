@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameModel
 {
-    public GameModel ()
-    {
-        Debug.Log("Model!!");
-    }
+
+    public float CurrentSpeed {set; get;} = 5;
+    public int CurrentScore {set; get;}
+    public int CoinsCollected {set; get;}
+    public int HighScore {set; get;}
+    public GameStateEnum CurrentGameState {set; get;}
 
 }
