@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinGold
       objectReference: {fileID: 0}
+    - target: {fileID: 950900273043801861, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 3132725537488119234, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -76,7 +80,9 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3132725537488119234, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
+    - {fileID: 3132725537488119246, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -89,6 +95,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 950900273043801861, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8520864263080209124}
+    - targetCorrespondingSourceObject: {fileID: 950900273043801861, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8940385510772004177}
   m_SourcePrefab: {fileID: 100100000, guid: 7e134282e0e24594d8c4b483e4068018, type: 3}
 --- !u!1 &6050976489579757356 stripped
 GameObject:
@@ -129,6 +138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameInfoSO: {fileID: 0}
+  playerTagName: Player
+  collecAnimState: Collect
+  idleAnimState: Idle
 --- !u!114 &8520864263080209124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +153,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54fb7e9ef027a894d86509c5b52d3888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-8940385510772004177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050976489579757356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2425, y: 0.2425, z: 0.02379296}
+  m_Center: {x: -0.000000037252903, y: 0.121262684, z: 0.0000014384277}

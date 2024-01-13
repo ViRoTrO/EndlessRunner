@@ -26,7 +26,24 @@ MonoBehaviour:
     PrefabReference: {fileID: 7021601653279507818, guid: 25fcc73b6fe722b488457cec3ee42ed1, type: 3}
   - Id: 7
     PrefabReference: {fileID: 3040627260013594196, guid: efe54fdc8ce626d4a8d714a3a98bf392, type: 3}
+  - Id: 3
+    PrefabReference: {fileID: 8195376582944903674, guid: c42cfae98f760f34ebefcd97058f5035, type: 3}
+  - Id: 4
+    PrefabReference: {fileID: 8195376582944903674, guid: 038bcaffba38eb140a5e0673f7f45249, type: 3}
+  - Id: 5
+    PrefabReference: {fileID: 8195376582944903674, guid: 8662d8f86b8325a418e1d7930f4e1722, type: 3}
+  - Id: 9
+    PrefabReference: {fileID: 8195376582944903674, guid: e694ea8ddffb78644adb2fdfcc587e22, type: 3}
   _coins:
   - Id: 0
     PrefabReference: {fileID: 6050976489579757356, guid: 5df8592d37f029d4da36bb7f873ca07b, type: 3}
   _audioClips: []
+  startSpeed: 10
+  maxEnvironmentZPos: -148
+  maxTrackItemsZPos: -5
+  jumpPower: 10
+  characterSpeed: 6
+  maxCoinsSpawn: 10
+  maxObstacleSpawn: 20
+  scoreMultiplier: 100
+  maxLives: 5

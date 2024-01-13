@@ -1,5 +1,6 @@
 
 
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -14,28 +15,60 @@ public class GameManager : BaseView
 
     private void Start()
     {
+        Model.StartSpeed = GameInfoSO.StartSpeed;
         SignalService.Subscribe<GameStateChanged>(OnGameStateChange);
+        SignalService.Subscribe<CoinsCollected>(OnCoinCOllect);
+        SignalService.Subscribe<PlayerHitObstacle>(OnPlayerHitObstacle);
+        AddMainMenu();
+        SetInitData();
+    }
+
+    private void SetInitData()
+    {
+        Model.LivesRemaining = GameInfoSO.MaxLives;
+        Model.CurrentScore = 0;
     }
 
     private void OnGameStateChange(GameStateChanged gameState)
     {
         Model.CurrentGameState = gameState.GameState;
-        
-        switch(gameState.GameState)
+
+        switch (gameState.GameState)
         {
             case GameStateEnum.GamePlayStart:
                 RemoveMainMenu();
-            break;
+                break;
 
             case GameStateEnum.GamePause:
                 Time.timeScale = 0;
-            break;
+                break;
 
             case GameStateEnum.GameUnPause:
                 Time.timeScale = 1;
-            break;
+                break;
         }
 
+    }
+
+    private void OnCoinCOllect()
+    {
+        Model.CoinsCollected++;
+    }
+
+    private void OnPlayerHitObstacle()
+    {
+        Model.LivesRemaining--;
+
+        if (Model.LivesRemaining < 0)
+        {
+            SignalService.Fire(new GameStateChanged()
+            {
+                GameState = GameStateEnum.GameOver
+            });
+
+            AddMainMenu();
+            SetInitData();
+        }
     }
 
     private void RemoveMainMenu()

@@ -14,3 +14,11 @@ public class GameStateChanged
 {
     public GameStateEnum GameState;
 }
+
+public class CoinsCollected
+{
+}
+
+public class PlayerHitObstacle
+{
+}

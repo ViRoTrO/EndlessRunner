@@ -39,7 +39,8 @@ public enum ObstacleTypesEnums
     JumpCenter,
     SlideLeft,
     SlideRight,
-    SlideCenter
+    SlideCenter,
+    Jump
 }
 
 public enum CoinTypesEnums

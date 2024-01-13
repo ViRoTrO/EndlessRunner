@@ -369,6 +369,8 @@
 -analyzer:"D:/UnityDev/Insallations/Editor/2022.3.13f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Enums.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GamePlayLogic/GanerateAndAddEnvironment.cs"
+"Assets/Scripts/GamePlayLogic/TrackItemBehavior.cs"
 "Assets/Scripts/MainInstaller.cs"
 "Assets/Scripts/Model/GameModel.cs"
 "Assets/Scripts/ScriptableObjects/GameSO.cs"

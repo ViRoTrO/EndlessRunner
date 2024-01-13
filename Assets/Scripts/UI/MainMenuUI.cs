@@ -15,7 +15,6 @@ public class MainMenuUI : BaseView
 
     protected void Start()
     {
-        SignalService.Subscribe<SwipeDetectionSignal>(SwipeDirection);
         SignalService.Subscribe<GameStateChanged>(OnGameStateChange);
         InitUI();
     }
@@ -25,11 +24,6 @@ public class MainMenuUI : BaseView
         gameObject.SetActive(true);
         playButton.SetActive(true);
         unPauseButton.SetActive(false);
-    }
-
-    private void SwipeDirection(SwipeDetectionSignal val)
-    {
-        Debug.Log(val.Direction.ToString());
     }
 
     public void OnPlayClick()

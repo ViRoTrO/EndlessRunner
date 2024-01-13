@@ -3,7 +3,14 @@ guid: b9655fb0a1c7c7745ab939ba1e2e897a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - GameInfoSO: {fileID: 11400000, guid: 40b07a2e40fc33c42bbbbaba985d89af, type: 2}
+  - mainMenuUI: {instanceID: 0}
+  - inGameUI: {instanceID: 0}
+  - mainMenuBackground: {instanceID: 0}
+  - mainCamera: {instanceID: 0}
+  - mainMenuCameraPosition: {instanceID: 0}
+  - inGameCameraPosition: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

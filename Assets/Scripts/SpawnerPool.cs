@@ -25,6 +25,13 @@ public class SpawnerPool : BaseView
         return _coinsPool.Get();
     }
 
+    public Obstacles GetRandomObstacle()
+    {
+        var random = Random.Range(0, GameInfoSO.GetObstaclesCount);
+        var en = (ObstacleTypesEnums)random;
+        return GetObstacleView(en);
+    }
+
     public Obstacles GetObstacleView(ObstacleTypesEnums type)
     {
         if (_obstaclePool == null)

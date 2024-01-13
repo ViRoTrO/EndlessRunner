@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7dc910f1fd3bb6f47b57ae7b3ca37599, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62,6 +66,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7dc910f1fd3bb6f47b57ae7b3ca37599, type: 3}
       insertIndex: -1
       addedObject: {fileID: -5198332108219120976}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7dc910f1fd3bb6f47b57ae7b3ca37599, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5636714345734460497}
   m_SourcePrefab: {fileID: 100100000, guid: 7dc910f1fd3bb6f47b57ae7b3ca37599, type: 3}
 --- !u!1 &2734272753401314607 stripped
 GameObject:
@@ -101,3 +108,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b006618bbfd429040bc895f8e3ab185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameInfoSO: {fileID: 0}
+  runState: Running
+  JumpState: Jump
+  moveRightState: Right
+  moveLeftState: Left
+  slideState: Slide
+  danceState: Dance
+  fallState: Fall
+  leftPosition: {fileID: 0}
+  centerPosition: {fileID: 0}
+  rightPosition: {fileID: 0}
+--- !u!136 &5636714345734460497
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2734272753401314607}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.27106363
+  m_Height: 1.5190984
+  m_Direction: 1
+  m_Center: {x: -0.0069461465, y: 0.79023963, z: 0}

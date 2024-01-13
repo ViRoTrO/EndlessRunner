@@ -9,8 +9,28 @@ public class GameSO : ScriptableObject
     [SerializeField] private List<ObstacleInfo> _obstacles;
     [SerializeField] private List<CoinsInfo> _coins;
     [SerializeField] private List<AudioClipInfo> _audioClips;
+    [SerializeField] private float startSpeed = 5;
+    [SerializeField] private float maxEnvironmentZPos = 20;
+    [SerializeField] private float maxTrackItemsZPos = 5;
+    [SerializeField] private float jumpPower = 7f;
+    [SerializeField] private float characterSpeed = 10f;
+    [SerializeField] private int maxCoinsSpawn = 30;
+    [SerializeField] private int maxObstacleSpawn = 20;
+    [SerializeField] private int scoreMultiplier = 100;
+    [SerializeField] private int maxLives = 3;
+    
 
     public GameObject EnvironMentPrefab => _environMentPrefab;
+    public float StartSpeed => startSpeed;
+    public float MaxEnvironmentZPos => maxEnvironmentZPos;
+    public float MaxTrackItemsZPos => maxTrackItemsZPos;
+    public float JumpPower => jumpPower;
+    public float CharacterSpeed => characterSpeed;
+    public int MaxCoinsSpawn => maxCoinsSpawn;
+    public int MaxObstacleSpawn => maxObstacleSpawn;
+    public int GetObstaclesCount => _obstacles.Count;
+    public int ScoreMultiplier => scoreMultiplier;
+    public int MaxLives => maxLives;
 
     public GameObject GetObstacles(ObstacleTypesEnums obstacleId)
     {

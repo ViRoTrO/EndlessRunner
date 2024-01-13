@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1609186c46fcc498d715bf3c70435a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameInfoSO: {fileID: 0}
+  GameInfoSO: {fileID: 11400000, guid: 40b07a2e40fc33c42bbbbaba985d89af, type: 2}
+  scoreText: {fileID: 2884869622385928765}
+  LivesPrefab: {fileID: 547104205693037750, guid: 42b01ba2c40012a4190c7adaeba41d16, type: 3}
+  LivesCOntainer: {fileID: 6427261215244172732}
 --- !u!1 &669632530483012725
 GameObject:
   m_ObjectHideFlags: 0
