@@ -36,10 +36,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -196,6 +194,9 @@ ScriptsOnlyBuild:
     - Zenject.Internal.DefaultSceneContractConfig/ContractInfo
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: InGameUI
+    methodName: OnPauseClicked
+  - assembly: Assembly-CSharp
     fullTypeName: MainMenuUI
     methodName: OnExitClick
   - assembly: Assembly-CSharp
@@ -204,9 +205,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuUI
     methodName: OnPlayClick
-  - assembly: Assembly-CSharp
-    fullTypeName: InGameUI
-    methodName: OnPauseClicked
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -454,9 +452,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 24320}
     - Class: 114
-      Script: {instanceID: 28044}
+      Script: {instanceID: 24360}
     - Class: 114
-      Script: {instanceID: 199008}
+      Script: {instanceID: 28864}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -2194,7 +2192,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 21a0e40f869690193e0e91cfa8e26198
+      Hash: e0a1d43c198618ea14ba7eb0a3b43cbb
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Player

@@ -51,13 +51,17 @@ public class SpawnerPool : BaseView
         return _environmentPool.Get();
     }
 
-    public void ReleaseCoin(CoinView item) => _coinsPool.Release(item);
+    public void ReleaseCoin(CoinView item)
+    {
+        if (item.gameObject.activeInHierarchy)
+            _coinsPool.Release(item);
+    }
 
     public void ReleaseObstacle(Obstacles item)
     {
-        if(item.gameObject.activeInHierarchy)
+        if (item.gameObject.activeInHierarchy)
             _obstaclePool[item.Id].Release(item);
-    } 
+    }
     public void ReleaseEnvironment(GameObject item) => _environmentPool.Release(item);
 
 

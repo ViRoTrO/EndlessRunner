@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -28,7 +29,7 @@ public class Player : BaseView
 
     private float _groundPositionY;
     private float _upForce;
-    private bool _isOnGround;
+    private bool _isHit;
     private bool _isJump;
     private bool _isSliding;
 
@@ -164,12 +165,23 @@ public class Player : BaseView
             return;
         }
 
+        if(_isHit)
+            return;
+
         if (tag == "Obstacle" || (tag == "ObstacleSlide" && !_isSliding))
         {
+            _isHit = true;
             SignalService.Fire(new PlayerHitObstacle());
             _animator.Play(fallState);
             SignalService.Fire(new PlayAudio(){audioClip = SoundNamesEnums.HitObstacle});
+            StartCoroutine(EnableHit());
         }
+    }
+
+    private IEnumerator EnableHit()
+    {
+        yield return new WaitForSeconds(0.3f);
+        _isHit = false;
     }
 }
 

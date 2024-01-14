@@ -76,7 +76,7 @@ public class GameManager : BaseView
 
         StartCoroutine(cameraShake.Shake(0.2f, 0.5f));
 
-        if (Model.LivesRemaining < 0)
+        if (Model.LivesRemaining <= 0)
         {
             ShowGameOver();
             SignalService.Fire(new GameStateChanged()
