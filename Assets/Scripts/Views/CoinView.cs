@@ -4,8 +4,6 @@ using UnityEngine;
 public class CoinView : BaseView
 {
     [SerializeField] private string playerTagName = "Player";
-    [SerializeField] private string collecAnimState = "Collect";
-    [SerializeField] private string idleAnimState = "Idle";
     private Animator animator;
 
     public event Action<CoinView> OnCollect;
@@ -23,10 +21,5 @@ public class CoinView : BaseView
             OnCollect.Invoke(this);
         }
 
-    }
-
-    private void OnEnable()
-    {
-        //animator.Play(idleAnimState);
     }
 }

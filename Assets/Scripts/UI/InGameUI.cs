@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -31,6 +29,7 @@ public class InGameUI : BaseView
         SignalService.Subscribe<GameStateChanged>(OnGameStateChange);
         SignalService.Subscribe<CoinsCollected>(OnCoinCOllect);
         SignalService.Subscribe<PlayerHitObstacle>(OnPlayerHitObstacle);
+        SignalService.Subscribe<UpdateUIScoreSignal>(OnUpdateScoreSignal);
         InitUI();
     }
 
@@ -53,7 +52,7 @@ public class InGameUI : BaseView
 
     private void OnCoinCOllect()
     {
-        scoreText.text = $"{Model.CoinsCollected * GameInfoSO.ScoreMultiplier}";
+        scoreText.text = Model.CalculateScoreOnCoinCOllect().ToString();
     }
 
     private void OnPlayerHitObstacle()
@@ -64,6 +63,11 @@ public class InGameUI : BaseView
             _livesList.Remove(go);
             Destroy(go);
         }
+    }
+
+    private void OnUpdateScoreSignal()
+    {
+        scoreText.text = Model.CurrentScore.ToString();
     }
 
 }

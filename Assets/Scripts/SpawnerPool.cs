@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -54,7 +53,11 @@ public class SpawnerPool : BaseView
 
     public void ReleaseCoin(CoinView item) => _coinsPool.Release(item);
 
-    public void ReleaseObstacle(Obstacles item) => _obstaclePool[item.Id].Release(item);
+    public void ReleaseObstacle(Obstacles item)
+    {
+        if(item.gameObject.activeInHierarchy)
+            _obstaclePool[item.Id].Release(item);
+    } 
     public void ReleaseEnvironment(GameObject item) => _environmentPool.Release(item);
 
 
@@ -64,15 +67,6 @@ public class SpawnerPool : BaseView
         go.TryGetComponent<Obstacles>(out var obstacle);
 
         return obstacle;
-    }
-
-    private CoinView CreateCoin()
-    {
-        var prefab = GameInfoSO.GetCoins(CoinTypesEnums.Noraml);
-        var go = Instantiate(prefab, SpawnContainer);
-        go.TryGetComponent<CoinView>(out var coin);
-
-        return coin;
     }
 
     private CoinView CreatePooledCoinItem()

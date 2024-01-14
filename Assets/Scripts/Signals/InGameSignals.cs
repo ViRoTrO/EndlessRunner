@@ -7,7 +7,16 @@ public class SwipeDetectionSignal
 
 public class PlayAudio
 {
-    public AudioClip audioClip;
+    public SoundNamesEnums audioClip;
+}
+
+public class PlayAudioInLoop
+{
+    public SoundNamesEnums audioClip;
+}
+
+public class StopAudio
+{
 }
 
 public class GameStateChanged
@@ -16,6 +25,10 @@ public class GameStateChanged
 }
 
 public class CoinsCollected
+{
+}
+
+public class UpdateUIScoreSignal
 {
 }
 

@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class TrackItemBehavior : MonoBehaviour
 {
+    public static bool PauseTrack;
     public event Action<TrackItemBehavior> OnReachMaxDistanceEvent;
-    
+
     private GameModel _model;
     private float _maxDistance;
     private bool _isReachMaxDistance;
@@ -18,11 +19,13 @@ public class TrackItemBehavior : MonoBehaviour
 
     private void Update()
     {
+        if (PauseTrack) return;
+
         if (_model != null && !_isReachMaxDistance)
         {
-             gameObject.transform.position += Vector3.back * _model.CurrentSpeed;
+            gameObject.transform.position += Vector3.back * _model.CurrentSpeed;
 
-            if(gameObject.transform.position.z < _maxDistance)
+            if (gameObject.transform.position.z < _maxDistance)
             {
                 _isReachMaxDistance = true;
                 OnReachMaxDistanceEvent.Invoke(this);

@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GanerateAndAddEnvironment : BaseView
@@ -30,6 +28,8 @@ public class GanerateAndAddEnvironment : BaseView
 
     private void InitiateEnvironments()
     {
+        if(environmentList.Count > 0) return;
+        
         for (int i = 0; i < maxSpawnCount; i++)
         {
             var go = CreateItem();

@@ -56,6 +56,7 @@ public enum SoundNamesEnums
     Jump,
     MoveLeft,
     MoveRight,
-    Slide
+    Slide,
+    HitObstacle
 
 }

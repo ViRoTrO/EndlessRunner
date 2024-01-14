@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : BaseView
@@ -9,14 +7,26 @@ public class SoundManager : BaseView
     private void Start()
     {
         SignalService?.Subscribe<PlayAudio>(PlaySound);
+        SignalService?.Subscribe<StopAudio>(StopAudio);
+        SignalService?.Subscribe<PlayAudioInLoop>(PlayInLoop);
 
     }
 
     private void PlaySound(PlayAudio val)
     {
-       //audioSource.clip = val.audioClip;
-       audioSource.PlayOneShot(val.audioClip);
+        var audioClip = GameInfoSO.GetAudioClip(val.audioClip);
+       audioSource.PlayOneShot(audioClip);
+    }
 
+    private void PlayInLoop(PlayAudioInLoop val)
+    {
+        var audioClip = GameInfoSO.GetAudioClip(val.audioClip);
+       audioSource.PlayOneShot(audioClip);
+    }
+
+    private void StopAudio(StopAudio val)
+    {
+       audioSource.Stop();
     }
 
 }

@@ -17,8 +17,12 @@ public class GameSO : ScriptableObject
     [SerializeField] private int maxCoinsSpawn = 30;
     [SerializeField] private int maxObstacleSpawn = 20;
     [SerializeField] private int scoreMultiplier = 100;
+    [SerializeField] private int scoreTimeFactor = 5;
+    [SerializeField] private int scoreDIstancFactor = 5;
     [SerializeField] private int maxLives = 3;
-    
+    [SerializeField] private float updateSpeedAfteSeconds = 10;
+    [SerializeField] private float speedUpdateAmount = 5;
+
 
     public GameObject EnvironMentPrefab => _environMentPrefab;
     public float StartSpeed => startSpeed;
@@ -30,7 +34,11 @@ public class GameSO : ScriptableObject
     public int MaxObstacleSpawn => maxObstacleSpawn;
     public int GetObstaclesCount => _obstacles.Count;
     public int ScoreMultiplier => scoreMultiplier;
+    public int ScoreDIstancFactor => scoreDIstancFactor;
+    public int ScoreTimeFactor => scoreTimeFactor;
     public int MaxLives => maxLives;
+    public float UpdateSpeedAfteSeconds => updateSpeedAfteSeconds;
+    public float SpeedUpdateAmount => speedUpdateAmount;
 
     public GameObject GetObstacles(ObstacleTypesEnums obstacleId)
     {

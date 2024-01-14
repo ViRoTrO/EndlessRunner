@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,7 +9,6 @@ public class Player : BaseView
     [SerializeField] private string moveRightState = "Right";
     [SerializeField] private string moveLeftState = "Left";
     [SerializeField] private string slideState = "Slide";
-    [SerializeField] private string danceState = "Dance";
     [SerializeField] private string fallState = "Fall";
     [SerializeField] private Transform leftPosition;
     [SerializeField] private Transform centerPosition;
@@ -44,7 +42,7 @@ public class Player : BaseView
         _groundPositionY = gameObject.transform.position.y;
         _targetPosition = transform.position;
         playerPosition = PlayerPositionEnum.Center;
-         _animator.Play(runState);
+        _animator.Play(runState);
     }
 
 
@@ -71,8 +69,10 @@ public class Player : BaseView
 
     private void OnGameStateChange(GameStateChanged gameState)
     {
-        // if(gameState.GameState == GameStateEnum.Pause)
-        //     gameObject.SetActive(true);
+        if(gameState.GameState == GameStateEnum.Playing)
+            SignalService.Fire(new PlayAudioInLoop(){audioClip = SoundNamesEnums.Run});
+        else if(gameState.GameState == GameStateEnum.GamePause || gameState.GameState == GameStateEnum.GameOver)
+            SignalService.Fire(new StopAudio());
 
     }
 
@@ -128,6 +128,7 @@ public class Player : BaseView
         _animator.Play(slideState);
         _isSliding = true;
         StartCoroutine(WaitForSLideTOEnd());
+        SignalService.Fire(new PlayAudio(){audioClip = SoundNamesEnums.Slide});
     }
 
     private IEnumerator WaitForSLideTOEnd()
@@ -140,24 +141,35 @@ public class Player : BaseView
     {
         _animator.Play(JumpState);
         _isJump = true;
+        StartCoroutine(WaitForJumpToEnd());
+        SignalService.Fire(new StopAudio());
+    }
 
+    private IEnumerator WaitForJumpToEnd()
+    {
+        yield return new WaitForSeconds(1f);
+        SignalService.Fire(new PlayAudioInLoop(){audioClip = SoundNamesEnums.Run});
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (Model.CurrentGameState != GameStateEnum.Playing)
+            return;
+
         var tag = collision.gameObject.tag;
-        if(tag == "Coin")
+        if (tag == "Coin")
         {
             SignalService.Fire(new CoinsCollected());
+            SignalService.Fire(new PlayAudio(){audioClip = SoundNamesEnums.CoinCollect});
             return;
         }
 
-        if(tag == "Obstacle" || (tag == "ObstacleSlide" && !_isSliding))
+        if (tag == "Obstacle" || (tag == "ObstacleSlide" && !_isSliding))
         {
             SignalService.Fire(new PlayerHitObstacle());
+            _animator.Play(fallState);
+            SignalService.Fire(new PlayAudio(){audioClip = SoundNamesEnums.HitObstacle});
         }
-        
-       
     }
 }
 
